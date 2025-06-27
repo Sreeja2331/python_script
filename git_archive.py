@@ -1,10 +1,10 @@
 import requests
 
-def archive_github_repo(user, repo_name, git_token):
+def archive_github_repo(repo_name, git_token):
     """
     Archive a GitHub repository (make it read-only)
     """
-    url = f"https://github.com/{user}/{repo_name}"
+    url = f"https://github.com/Sreeja2331/{repo_name}"
 
     headers = {
         'Authorization': f'token {git_token}'
@@ -22,4 +22,4 @@ def archive_github_repo(user, repo_name, git_token):
         print(f"Failed to archive the repository. Status code: {response.status_code}")
         print(response.text)
 
-archive_github_repo(user, repo_name, git_token)
+archive_github_repo(repo_name, git_token)
