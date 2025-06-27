@@ -4,7 +4,7 @@ def archive_github_repo(user, repo_name, git_token):
     """
     Archive a GitHub repository (make it read-only)
     """
-    url = f"https://api.github.com/repos/{user}/{repo_name}"
+    url = f"https://github.com/{user}/{repo_name}"
 
     headers = {
         'Authorization': f'token {git_token}'
