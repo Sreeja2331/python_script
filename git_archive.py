@@ -8,8 +8,8 @@ def archive_github_repo(repo_name, git_token):
     url = f"https://api.github.com/repos/Sreeja2331/{repo_name}"
 
     headers = {
-        'Authorization': f'token {git_token}'
-        'Accept: application/vnd.github.v+json'
+        'Authorization': f'token {git_token}',
+        'Accept': 'application/vnd.github.v+json'
     }
 
     data = {
