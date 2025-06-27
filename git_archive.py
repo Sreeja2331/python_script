@@ -1,4 +1,5 @@
 import requests
+import sys
 
 def archive_github_repo(repo_name, git_token):
     """
@@ -8,6 +9,7 @@ def archive_github_repo(repo_name, git_token):
 
     headers = {
         'Authorization': f'token {git_token}'
+        'Accept': 'application/vnd.github.v3+json'
     }
 
     data = {
@@ -22,4 +24,8 @@ def archive_github_repo(repo_name, git_token):
         print(f"Failed to archive the repository. Status code: {response.status_code}")
         print(response.text)
 
-archive_github_repo(repo_name, git_token)
+if __name__ == "__main__":
+    repo_name = sys.argv[1]
+    git_token = sys.argv[2]
+
+    archive_github_repo(repo_name, git_token)
