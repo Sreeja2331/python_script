@@ -9,7 +9,7 @@ def archive_github_repo(repo_name, git_token):
 
     headers = {
         'Authorization': f'token {git_token}'
-        'Accept': 'application/vnd.github.v3+json'
+        'Accept: application/vnd.github.v3+json'
     }
 
     data = {
